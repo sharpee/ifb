@@ -1,4 +1,12 @@
-ifb
-===
+#ifb
 
-From "Identifying functional bases for multidimensional neural computations"
+This repository contains supplemental code for our Neural Computation paper:
+"Identifying functional bases for multidimensional neural computations"
+
+http://www.ncbi.nlm.nih.gov/pubmed/23607565
+
+
+##Abstract
+Current dimensionality-reduction methods can identify relevant subspaces for neural computations but do not favor one basis over the other within the relevant subspace. Finding the appropriate basis can simplify the description of the nonlinear computation with respect to the relevant variables, making it easier to elucidate the underlying neural computation and make hypotheses about the neural circuitry, giving rise to the observed responses. Part of the problem is that although some of the dimensionality reduction methods can identify many of the relevant dimensions, it is usually difficult to map out or interpret the nonlinear transformation with respect to more than a few relevant dimensions simultaneously without some simplifying assumptions. While recent approaches make it possible to create predictive models based on many relevant dimensions simultaneously, there still remains the need to relate such predictive models to the mechanistic descriptions of the operation of underlying neural circuitry. Here we demonstrate that transforming to a basis within the relevant subspace where the neural computation is best described by a given nonlinear function often makes it easier to interpret the computation and describe it with a small number of parameters. We refer to the corresponding basis as the functional basis, and illustrate the utility of such transformation in the context of logical OR and logical AND functions. We show that although dimensionality-reduction methods such as spike-triggered covariance are able to find a relevant subspace, they often produce dimensions that are difficult to interpret and do not correspond to a functional basis. The functional features can be found using a maximum likelihood approach. The results are illustrated using simulated neurons and recordings from retinal ganglion cells. The resulting features are uniquely defined and nonorthogonal, and they make it easier to relate computational and mechanistic models to each other.
+
+PMID: 23607565 [PubMed - as supplied by publisher]
