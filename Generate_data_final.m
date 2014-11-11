@@ -18,7 +18,8 @@ filter = 3;
 % filter 2 is a rotationally invariant curved edge
 % filter 3 is a translationally invariant center-surround
 
-save_dir = '/home/jkaardal/Model_cell_data/';
+% Make this directory if it doesn't exist
+save_dir = './Model_cell_data/';
 % Parameters defined
 %%%%%%%%%%%%%%%%%%%%
 
@@ -169,10 +170,7 @@ end
 clear stimulus;
 image_dir = '...?';
 if nat==1
-    fid = fopen('/home/jkaardal/Model_cell_data/SN_1.raw','rb');
-    stimulus=fread(fid,Nsamp*Ndim,'uint8');
-    fclose(fid);
-    Ndim = Nd^2;
+    % load natural movie stimuli here
 else
     % Create a Gaussian stimulus 
     sigma = repmat(rand(1,Ndim),[Ndim,1]).*eye(Ndim);

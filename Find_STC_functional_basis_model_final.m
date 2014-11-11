@@ -1,8 +1,8 @@
 global Nfilter
 global Nthres
 
-addpath(genpath('/home/jkaardal/Functional_basis_code/Functional_basis_code/'))
-addpath(genpath('/home/jkaardal/Model_cell_data/'));
+% Path to where optimization code is stored
+addpath(genpath('./Functional_basis_functions/'))
 
 modelcell=1;     % 1 if model cell, 0 if real data
 cellnum = 1;     % model cell number (ignore if using real data)
@@ -125,21 +125,21 @@ for i=1:Nthres
     B(:,i) = B(:,i)/norm(B(:,i));
 end
 % save stuff
-% if logicalOR==1
-%     if modelcell==1
-%         save(['Model_cell_data/Model_cell_' num2str(cellnum) '_Nthres' int2str(Nthres) '_OR_parameters.mat'],'A');
-%         save(['Model_cell_data/Model_cell_' num2str(cellnum) '_Nthres' int2str(Nthres) '_functional_basis_OR.mat'],'B');
-%     else
-%         % save the functional basis parameters
-%     end
-% else
-%     if modelcell==1
-%         save(['Model_cell_data/Model_cell_' num2str(cellnum) '_Nthres' int2str(Nthres) '_AND_parameters.mat'],'A');
-%         save(['Model_cell_data/Model_cell_' num2str(cellnum) '_Nthres' int2str(Nthres) '_functional_basis_AND.mat'],'B');
-%     else
-%         % save the functional basis parameters
-%     end
-% end
+if logicalOR==1
+    if modelcell==1
+        save(['Model_cell_data/Model_cell_' num2str(cellnum) '_Nthres' int2str(Nthres) '_OR_parameters.mat'],'A');
+        save(['Model_cell_data/Model_cell_' num2str(cellnum) '_Nthres' int2str(Nthres) '_functional_basis_OR.mat'],'B');
+    else
+        % save the functional basis parameters
+    end
+else
+    if modelcell==1
+        save(['Model_cell_data/Model_cell_' num2str(cellnum) '_Nthres' int2str(Nthres) '_AND_parameters.mat'],'A');
+        save(['Model_cell_data/Model_cell_' num2str(cellnum) '_Nthres' int2str(Nthres) '_functional_basis_AND.mat'],'B');
+    else
+        % save the functional basis parameters
+    end
+end
 % plot the vectors
 figure(2)
 indx=1;
