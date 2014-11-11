@@ -1,4 +1,6 @@
 function [p, xi, fret] = minfunc(p, xi, func, dfunc, F, stimulus, P)
+% Based on dlinmin.c from Numerical Recipes in C (1992)
+% by W.H. Press, S.A. Teukolsky, W.T. Vetterling, and B.P. Flannery 
 
 TOL    = 2.0e-5;
 global pcom xicom nrfunc nrdfun;
