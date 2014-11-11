@@ -1,7 +1,8 @@
 global Nfilter
 global Nthres
 
-addpath(genpath('./Functional_basis_code/'))
+% Path to where optimization code is stored
+addpath(genpath('./Functional_basis_functions/'))
 
 modelcell=1;     % 1 if model cell, 0 if real data
 cellnum = 1;     % model cell number (ignore if using real data)
