@@ -1,4 +1,6 @@
 function [pfinal,fret] = MaxLikelihood(p, func, dfunc, F, ftol, stimulus, P)
+% Based on frprmn.c from Numerical Recipes in C (1992)
+% by W.H. Press, S.A. Teukolsky, W.T. Vetterling, and B.P. Flannery 
 
 ITMAX = 1000;
 EPS   = 1.0e-10;
