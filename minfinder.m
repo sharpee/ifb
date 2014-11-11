@@ -1,4 +1,6 @@
 function [rval, xmin] = minfinder(ax, bx, cx, f, df, tol, F, stimulus, P)
+% Based on dbrent.c from Numerical Recipes in C (1992)
+% by W.H. Press, S.A. Teukolsky, W.T. Vetterling, and B.P. Flannery 
 
 ITMAX = 500;
 ZEPS  = 1.0e-9;
