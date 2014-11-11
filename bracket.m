@@ -1,4 +1,6 @@
 function [ax, bx, cx, fa, fb, fc]=bracket(ax,bx,f, F, stimulus, P)
+% Based on bracket.c from Numerical Recipes in C (1992)
+% by W.H. Press, S.A. Teukolsky, W.T. Vetterling, and B.P. Flannery 
 
 GOLD=1.618034;
 GLIMIT=100.0;
